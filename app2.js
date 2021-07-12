@@ -1,10 +1,10 @@
 const url = require('url');
 const Connection = require('pg').Pool;
 const myconnect = new Connection({
-    user:'lolhjxpokcsecd',
-	host:'ec2-52-7-115-250.compute-1.amazonaws.com',
-	database:'d4juj45rq7vo7c',
-	password:'ea860c5f937749f03df02d976a849a39a82ac570ee10c4faab2be3ae165b0be8',
+    user:'hnbbgcssrlmkrx',
+	host:'ec2-3-234-22-132.compute-1.amazonaws.com',
+	database:'d17kdnl5hlf2q1',
+	password:'4f54c669f876c971f777ca7d49d4ed95824b54b8ca0adf50a3062a9acb38eaa2',
 	port:'5432',
 	ssl: {
 		rejectUnauthorized: false,
@@ -485,8 +485,8 @@ router.get('/checkout',(req,res) => {
 			});
 			break;
 		case"Submit":
-		var queryString = `INSERT INTO public."invoice" (id,date,productid,product_name,price,quantity,total) 
-		VALUES ('${qparams.invoiceid}','${qparams.invoicedate}','${qparams.productid}','${qparams.productname}','${qparams.price}','${qparams.quantity}','${qparams.total}')`; 
+		var queryString = `INSERT INTO public."invoice" (id,date,productid,price,quantity,total) 
+		VALUES ('${qparams.invoiceid}','${qparams.invoicedate}','${qparams.productid}','${qparams.price}','${qparams.quantity}','${qparams.total}')`; 
 		console.log(queryString);
 		myconnect.query(queryString, (error,results) => {if (error)
 		{
