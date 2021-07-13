@@ -116,9 +116,7 @@ router.get('/viewcustomer',(req,res)=>{
 					<table style="width:80%" class="table table-striped">
 						<tr>
 						  <th>${queryResult.fields[0].name}</th>
-						  <th>${queryResult.fields[1].name}</th>
-						  
-						  
+						  <th>${queryResult.fields[1].name}</th>												  
 						  <th>${queryResult.fields[4].name}</th>
 						  <th>${queryResult.fields[2].name}</th>
 						  <th>${queryResult.fields[3].name}</th>
